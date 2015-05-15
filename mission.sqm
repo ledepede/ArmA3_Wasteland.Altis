@@ -22526,7 +22526,7 @@ class Mission
 		{
 			position[]={12023.773,0.090267554,25987.053};
 			name="teamspeak";
-			text="TEAMSPEAK: TS.NL-UNITED.NL";
+			text="TEAMSPEAK: TS3.GC-GAMING.DK";
 			type="mil_box";
 			colorName="ColorWEST";
 			angle=-270;
