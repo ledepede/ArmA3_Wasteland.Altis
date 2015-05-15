@@ -45,7 +45,8 @@ removeHeadgear player;
 			{
 				if (player isUniformAllowed _value) then
 				{
-					player addUniform _value;
+					//player addUniform _value;
+					player forceAddUniform _value;
 				}
 				else
 				{
@@ -53,11 +54,13 @@ removeHeadgear player;
 
 					if (player isUniformAllowed _newUniform) then
 					{
-						player addUniform _newUniform;
+						//player addUniform _newUniform;
+						player forceAddUniform _newUniform;
 					}
 					else
 					{
-						player addUniform ([player, "uniform"] call getDefaultClothing);
+						//player addUniform ([player, "uniform"] call getDefaultClothing);
+						player forceAddUniform ([player, "uniform"] call getDefaultClothing);
 					}
 				};
 			};

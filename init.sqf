@@ -17,6 +17,9 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 
+//disable TAW grass Option 'None'
+tawvd_disablenone = true;
+
 // versionName = ""; // Set in STR_WL_WelcomeToWasteland in stringtable.xml
 
 if (isServer) then { X_Server = true };
@@ -38,11 +41,11 @@ if (!isDedicated) then
 	{
 		if (hasInterface) then // Normal player
 		{
-			9999 cutText ["Welcome to A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
+			9999 cutText ["Welcome to Game Crashers Gaming A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
 
 			waitUntil {!isNull player};
 			player setVariable ["playerSpawning", true, true];
-
+			
 			removeAllWeapons player;
 			client_initEH = player addEventHandler ["Respawn", { removeAllWeapons (_this select 0) }];
 
@@ -69,8 +72,20 @@ if (isServer) then
 	[] execVM "server\init.sqf";
 };
 
-//init 3rd Party Scripts
-[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
+//init 3rd Party Scripts (not supposed to run on HC)
+if (hasInterface || isServer) then
+{
+[] execVM "addons\R3F_LOG\init.sqf";
 [] execVM "addons\proving_ground\init.sqf";
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
+[] execVM "addons\laptop\init.sqf";							// Addon for hack laptop mission
+[] execVM "addons\vactions\functions.sqf";					// Micovery vehicle actions
+[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";		// Airdrop
+[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";				// Keypad for base locking
+[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
+[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";			// Fastrope
+[] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";	// Mag Repacker
+
+[] execVM "addons\scripts\intro.sqf";						// Welcome intro
+};

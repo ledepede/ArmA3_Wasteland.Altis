@@ -282,7 +282,7 @@ while {true} do
 	// Global voice warning system
 	if (_globalVoiceWarnTimer > 0 && _globalVoiceMaxWarns > 0) then
 	{
-		if (!isNull findDisplay 55 && ctrlText (findDisplay 63 displayCtrl 101) == localize "str_channel_global" && !((getPlayerUID player) call isAdmin)) then
+		if (!isNull findDisplay 55 && (ctrlText (findDisplay 63 displayCtrl 101) == localize "str_channel_global" || ctrlText (findDisplay 63 displayCtrl 101) == localize "str_channel_side") && !((getPlayerUID player) call isAdmin)) then
 		{
 			if (isNil "_globalVoiceTimestamp") then
 			{
@@ -303,7 +303,7 @@ while {true} do
 					if (_globalVoiceWarning < _globalVoiceMaxWarns) then
 					{
 						uiNamespace setVariable ["BIS_fnc_guiMessage_status", false];
-						["Please stop using the global voice channel, or you will be killed and crashed.", _msgTitle] spawn BIS_fnc_guiMessage;
+						["Please stop using the global/side voice channel, or you will be killed and crashed.", _msgTitle] spawn BIS_fnc_guiMessage;
 					}
 					else
 					{
@@ -313,7 +313,7 @@ while {true} do
 							setPlayerRespawnTime 1e11;
 							player setDamage 1;
 							uiNamespace setVariable ["BIS_fnc_guiMessage_status", false];
-							_msgBox = ["You have exceeded the tolerance limit for using the global voice channel. Goodbye.", _this] spawn BIS_fnc_guiMessage;
+							_msgBox = ["You have exceeded the tolerance limit for using the global/side voice channel. Goodbye.", _this] spawn BIS_fnc_guiMessage;
 							_time = diag_tickTime;
 							waitUntil {scriptDone _msgBox || diag_tickTime - _time >= 5};
 							preprocessFile "client\functions\quit.sqf"; // CTD

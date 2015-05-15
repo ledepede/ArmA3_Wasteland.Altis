@@ -274,6 +274,39 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+ [
+"NL United",
+"
+<br/> [Added] Base relocker (It is hackable and destroyable)
+<br/> [Added] Ability to change uniform texture
+<br/> [Added] Custom view distance ability
+<br/> [Added] Show R.I.P. map marker on corpse location after death
+<br/> [Added] Multiplying money reward for players that stay on the server
+<br/> [Added] Changed the appearance of the store NPCs
+<br/> [Added] Added several new vehicle textures
+<br/> [Added] Sell and Change Ownership trucks
+<br/> [Added] Vehicle locking and info script by Micovery
+<br/> [Added] Locked vehicle hotwire in at a cost
+<br/> [Added] Heal self script
+<br/> [Added] Access to DLC Helicopter pilot seat without DLC
+<br/> [Added] Patrol mission: Airport patrol
+<br/> [Added] New missions: Hostile Jet, Smugglers, Snipers and Hackers
+<br/> [Added] Blufor base for Blufor only
+<br/> [Added] Admin base in saltflats
+<br/> [Added] Intro script
+<br/> [Added] Player controlled IP cameras
+<br/> [Added] Device detector (IP Cameras and Spawn Beacons)
+<br/> [Added] Resupply truck
+<br/> [Added] Donator bases with donator lock state
+<br/> [Added] Mortar to one mission as reward
+<br/> [Removed] Mortar from store
+<br/> [Changed] Raise some prices
+<br/> [Changed] Vehicles spawn in locked and with engine on
+<br/> [Changed] Spawnbeacon insertion to 0 mtrs
+<br/> [Changed] Old R3F script to 3.1
+"
+]];
 
 player createDiaryRecord ["credits",
 [
@@ -331,6 +364,10 @@ player createDiaryRecord ["credits",
 <br/>	* Tonic (BIS forums)
 <br/>	* wiking.at (A3W forums)
 <br/>	* Zenophon (BIS Forums)
+<br/>	* Cael817 (A3W forums)
+<br/>	* Micovery (A3W forums)
+<br/>	* BadVolt (A3W forums)
+<br/>	* LouD (NL United / A3W forums)
 <br/>
 <br/><font size='16'>Thanks A LOT to everyone involved for the help and inspiration!</font>
 "

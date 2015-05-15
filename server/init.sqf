@@ -21,7 +21,7 @@ addMissionEventHandler ["HandleDisconnect",
 	_id = _this select 1;
 	_uid = _this select 2;
 	_name = _this select 3;
-
+	
 	diag_log format ["HandleDisconnect - %1", [_name, _uid]];
 
 	if (alive _unit) then
@@ -49,6 +49,8 @@ addMissionEventHandler ["HandleDisconnect",
 
 //Execute Server Side Scripts.
 call compile preprocessFileLineNumbers "server\antihack\setup.sqf";
+[] execVM (externalConfigFolder + "\donators.sqf"); // donators
+[] execVM (externalConfigFolder + "\nlunited.sqf");	// NL United
 [] execVM "server\admins.sqf";
 [] execVM "server\functions\serverVars.sqf";
 _serverCompileHandle = [] spawn compile preprocessFileLineNumbers "server\functions\serverCompile.sqf"; // scriptDone stays stuck on false when using execVM on Linux
@@ -112,7 +114,9 @@ forEach
 	"A3W_atmEditorPlacedOnly",
 	"A3W_atmMapIcons",
 	"A3W_atmRemoveIfDisabled",
-	"A3W_uavControl"
+	"A3W_uavControl",
+	"A3W_townSpawnCooldown",
+	"A3W_maxSpawnBeacons"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
@@ -125,11 +129,12 @@ _staticWeaponSavingOn = ["A3W_staticWeaponSaving"] call isConfigOn;
 _warchestSavingOn = ["A3W_warchestSaving"] call isConfigOn;
 _warchestMoneySavingOn = ["A3W_warchestMoneySaving"] call isConfigOn;
 _beaconSavingOn = ["A3W_spawnBeaconSaving"] call isConfigOn;
+_cameraSavingOn = ["A3W_cctvCameraSaving"] call isConfigOn;
 
 _purchasedVehicleSavingOn = ["A3W_purchasedVehicleSaving"] call isConfigOn;
 _missionVehicleSavingOn = ["A3W_missionVehicleSaving"] call isConfigOn;
 
-_objectSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn);
+_objectSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _cameraSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn);
 _vehicleSavingOn = (_purchasedVehicleSavingOn || _purchasedVehicleSavingOn);
 
 _setupPlayerDB = scriptNull;
@@ -145,20 +150,21 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn) then
 	// extDB
 	if (_savingMethod == "extDB") then
 	{
-		_version = "extDB" callExtension "9:VERSION";
+		_version = "extDB2" callExtension "9:VERSION";
 
-		if (parseNumber _version >= 20) then
+		if (parseNumber _version >= 49) then
 		{
 			A3W_savingMethodName = compileFinal "'extDB'";
 			A3W_savingMethodDir = compileFinal "'extDB'";
 			A3W_extDB_ConfigName = compileFinal str (["A3W_extDB_ConfigName", "A3W"] call getPublicVar);
 			A3W_extDB_IniName = compileFinal str (["A3W_extDB_IniName", "a3wasteland"] call getPublicVar);
+			A3W_extDB_RconName = compileFinal str (["A3W_extDB_RconName", "A3W"] call getPublicVar);
 		}
 		else
 		{
 			if (_version != "") then
 			{
-				diag_log format "[INFO] ### extDB startup cancelled!";
+				diag_log format "[INFO] ### extDB2 startup cancelled!";
 				diag_log format ["[INFO] ### A3W requires extDB v20 or later: v%1 detected", _result];
 			}
 			else
@@ -259,6 +265,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn) then
 		["vehicleSaving", _vehicleSavingOn],
 		["boxSaving", _boxSavingOn],
 		["staticWeaponSaving", _staticWeaponSavingOn],
+		["cctvCameraSaving", _cameraSavingOn],
 		["warchestSaving", _warchestSavingOn],
 		["warchestMoneySaving", _warchestMoneySavingOn],
 		["spawnBeaconSaving", _beaconSavingOn]
