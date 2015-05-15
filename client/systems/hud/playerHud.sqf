@@ -11,6 +11,7 @@
 #define hud_vehicle_idc 3601
 #define hud_activity_icon_idc 3602
 #define hud_activity_textbox_idc 3603
+#define hud_server_idc 3604 //GCG INFO
 
 scriptName "playerHud";
 
@@ -107,6 +108,14 @@ while {true} do
 	_hudVehicle = _ui displayCtrl hud_vehicle_idc;
 	_hudActivityIcon = _ui displayCtrl hud_activity_icon_idc;
 	_hudActivityTextbox = _ui displayCtrl hud_activity_textbox_idc;
+
+	//GCG START
+	_hudServerTextbox = _ui displayCtrl hud_server_idc;
+	_serverString = format ["<t color='#A0FFFFFF'>Server: Danish Wasteland Hangout</t>"];
+	_serverString = format ["%1<br/><t color='#A0FFFFFF'>Teamspeak: ts3.gc-gaming.dk<br/>Website: gc-gaming.dk</t><br/><t color='#A0FFFFFF'>Facebook: =Game Crashers Gaming=</t>",_serverString];
+	_hudServerTextbox ctrlSetStructuredText parseText _serverString;
+	_hudServerTextbox ctrlCommit 0;
+	//GCG END
 
 	//Calculate Health 0 - 100
 	_health = ((1 - damage player) * 100) max 0;
