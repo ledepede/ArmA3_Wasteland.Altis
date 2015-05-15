@@ -1,5 +1,5 @@
 //display the "Vehicle Information" action
-cfg_va_info_action_on = true; 
+cfg_va_info_action_on = false; 
 
 //display "Unflip vehicle" action (when vehicle is flipped)
 cfg_va_unflip_action_on = true;  
