@@ -178,7 +178,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			{
 				_object setPosATL [_safePos select 0, _safePos select 1, 0.05];
 				_object setVelocity [0,0,0.01];
-				_object engineOn true; // Lets already turn the engine one to see if it fixes exploding vehicles.
+				_object engineOn false; // Turn engine on or off, when bought in the store
 				_object lock 2; // Spawn vehicles in locked
 				_object setVariable ["R3F_LOG_disabled", true, true]; // Spawn vehicles in locked
 				// _object spawn cleanVehicleWreck;
