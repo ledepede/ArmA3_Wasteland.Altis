@@ -67,14 +67,14 @@ _setupObjects =
 
 	_vehicles =
 	[
-		[_veh5, _vehiclePosArray, 0] call _createVehicle,
+		[_veh1, _vehiclePosArray, 0] call _createVehicle,
 		[_veh2, _vehiclePosArray, 0] call _createVehicle,
 		[_veh3, _vehiclePosArray, 0] call _createVehicle,
 		[_veh4, _vehiclePosArray, 0] call _createVehicle,
-		[_veh1, _vehiclePosArray, 0] call _createVehicle
+		[_veh5, _vehiclePosArray, 0] call _createVehicle
 	];
 
-	_leader = effectiveCommander (_vehicles select 4);
+	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
 	_leader setRank "LIEUTENANT";
 	
