@@ -82,8 +82,8 @@ _setupObjects =
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
 
-	_aiGroup setCombatMode "GREEN"; // units will never fire
-	_aiGroup setBehaviour "CARELESS"; // nits will try to stay on roads, not caring about finding any cover
+	_aiGroup setCombatMode "GREEN"; // BLUE = units will never fire
+	_aiGroup setBehaviour "CARELESS"; // Units will try to stay on roads, not caring about finding any cover
 	_aiGroup setFormation "STAG COLUMN";
 
 	_speedMode = if (missionDifficultyHard) then { "FULL" } else { "FULL" };
