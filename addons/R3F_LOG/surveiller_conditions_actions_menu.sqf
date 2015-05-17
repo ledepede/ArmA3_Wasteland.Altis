@@ -45,7 +45,7 @@ while {true} do
 		Object_safePos = 
 		{
 				_obj = cursorTarget;
-				_maxDist = 100;
+				_maxDist = 300;
 				_allowed = true;
 				{
 					//diag_log format ["Checking %1 with coords %2. Distance: %3, max: %4",_obj,_x,_obj distance _x,_maxDist];
