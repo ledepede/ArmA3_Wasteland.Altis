@@ -16,7 +16,6 @@ for "_i" from 0 to 1 step 0 do
 	
 	if (_lsd > 2 || _mar > 2 || _coc > 2 || _her > 2) then
 		{
-
 			_title  = "<t color='#ff0000' size='1.2' align='center'>Drug runner! </t><br />";
 			_name = format ["%1<br /> ",name player];     
 			_text = "<t color='#FFFFFF' shadow='1' shadowColor='#000000' align='center'>Someone has spotted you carrying drugs and has marked your location on the map!</t><br />";     

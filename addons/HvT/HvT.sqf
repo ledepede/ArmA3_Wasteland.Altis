@@ -11,7 +11,6 @@ for "_i" from 0 to 1 step 0 do
 {
 	if (player getvariable "cmoney" > 99999) then
 		{
-
 			_title  = "<t color='#ff0000' size='1.2' align='center'>High Value Target! </t><br />";
 			_name = format ["%1<br /> ",name player];     
 			_text = "<t color='#FFFFFF' shadow='1' shadowColor='#000000' align='center'>Someone has spotted you carrying a large sum of money and has marked your location on the map!</t><br />";     
