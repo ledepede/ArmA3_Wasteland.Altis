@@ -56,25 +56,25 @@ _setupObjects =
 	
 	//_pos = getMarkerPos (_town select 0);
 	_rad = _town select 1;
-	_vehiclePosArray = [_missionPos,_rad + 250,_rad + 250,25,0,0,0] call findSafePos;
-	_vPos1 = _vehiclePosArray select 0;
+	_vehiclePosArray = [_missionPos,_rad,_rad + 50,5,0,0,0] call findSafePos;
+	/*_vPos1 = _vehiclePosArray select 0;
 	_vPos2 = _vehiclePosArray select 1;
 	_vPos3 = _vehiclePosArray select 2;
 	_vehiclePos1 = [_vPos1 + 5, _vPos2 + 5, _vPos3];
 	_vehiclePos2 = [_vPos1 + 10, _vPos2 + 10, _vPos3];
 	_vehiclePos3 = [_vPos1 + 15, _vPos2 + 15, _vPos3];
-	_vehiclePos4 = [_vPos1 + 20, _vPos2 + 20, _vPos3];
+	_vehiclePos4 = [_vPos1 + 20, _vPos2 + 20, _vPos3];*/
 
 	_vehicles =
 	[
-		[_veh1, _vehiclePosArray, 0] call _createVehicle,
-		[_veh2, _vehiclePos1, 0] call _createVehicle,
-		[_veh3, _vehiclePos2, 0] call _createVehicle,
-		[_veh4, _vehiclePos3, 0] call _createVehicle,
-		[_veh5, _vehiclePos4, 0] call _createVehicle
+		[_veh5, _vehiclePosArray, 0] call _createVehicle,
+		[_veh2, _vehiclePosArray, 0] call _createVehicle,
+		[_veh3, _vehiclePosArray, 0] call _createVehicle,
+		[_veh4, _vehiclePosArray, 0] call _createVehicle,
+		[_veh1, _vehiclePosArray, 0] call _createVehicle
 	];
 
-	_leader = effectiveCommander (_vehicles select 0);
+	_leader = effectiveCommander (_vehicles select 4);
 	_aiGroup selectLeader _leader;
 	_leader setRank "LIEUTENANT";
 	
@@ -88,7 +88,7 @@ _setupObjects =
 	{
 		_waypoint = _aiGroup addWaypoint [markerPos (_x select 0), 0];
 		_waypoint setWaypointType "MOVE";
-		_waypoint setWaypointCompletionRadius 25;
+		_waypoint setWaypointCompletionRadius 50;
 		_waypoint setWaypointCombatMode "GREEN";
 		_waypoint setWaypointBehaviour "SAFE"; // safe is the best behaviour to make AI follow roads, as soon as they spot an enemy or go into combat they WILL leave the road for cover though!
 		_waypoint setWaypointFormation "FILE";
@@ -137,7 +137,7 @@ _successExec =
 {
 	// Mission completed
 
-	for "_x" from 1 to 10 do
+	for "_x" from 1 to 5 do
 	{
 		_cash = "Land_Money_F" createVehicle markerPos _marker;
 		_cash setPos ((markerPos _marker) vectorAdd ([[2 + random 2,0,0], random 360] call BIS_fnc_rotateVector2D));
@@ -146,7 +146,7 @@ _successExec =
 		_cash setVariable["owner","world",true];
 	};
 	
-	_drugpilerandomizer = [8,12];
+	_drugpilerandomizer = [8,12,16];
 	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
 	
 	for "_i" from 1 to _drugpile do 
