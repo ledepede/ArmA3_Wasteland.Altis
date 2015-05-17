@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: HvT.sqf
-//	@file Author: Cael817, CRE4MPIE
+//	@file Author: Cael817, CRE4MPIE, rewrite by LouD.
 //	@file Info:
 
 if (isDedicated) exitWith {};
