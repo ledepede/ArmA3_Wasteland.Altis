@@ -5,12 +5,13 @@ private ["_messages", "_timeout"];
 _messages = [
 	["GCG", "Game Crashers Gaming"],
 	["Welcome", (name player)],
-	["A3Wasteland", worldName],
+	["A3Wasteland on", worldName],
 	["Teamspeak", "ts3.gc-gaming.dk"],
 	["Website", "gc-gaming.dk"],
-	["Saving", "Check the Server Rules to see saving times."],
+	["Server Restart @", "0200 ; 0600 ; 1000   1400 ; 1800 ; 2200"],
 	["ATM / Bank", "You can use any ATM found in Altis."],
-	["Earplugs", "Put in your earplugs by using the END key."]
+	["Earplugs", "Put in your earplugs by using the END key."],
+	["3D Markers", "Enable/disable 3D markers by pressing Y"]
 ];
 
 _timeout = 5;
