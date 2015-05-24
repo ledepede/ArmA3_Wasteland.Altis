@@ -39,5 +39,9 @@
 	["TERRITORY_6_DOCKS_A", "DOCKS North", 1000],
 	["TERRITORY_6_DOCKS_B", "DOCKS Center", 1000],
 	["TERRITORY_6_DOCKS_C", "DOCKS South", 1000],
-	["TERRITORY_6_DOCKS_D", "DOCKS Military", 1000]
+	["TERRITORY_6_DOCKS_D", "DOCKS Military", 1000],
+	// Added by DirtyPede @ Game Crashers Gaming
+	["TERRITORY_OILRIG_1", "Oilrig South", 4000],
+	["TERRITORY_OILRIG_2", "Oilrig Center", 4000],
+	["TERRITORY_OILRIG_3", "Oilrig North", 4000]
 ]
