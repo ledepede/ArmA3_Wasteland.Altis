@@ -464,7 +464,14 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_BarrelWater_F", 2],
 	["Land_Cargo_HQ_V1_F", 15],  //Added on request by DKMILLA
     ["Land_LampHalogen_F", 3],  //Added on request by DKMILLA
-    ["Land_Pier_F", 18 ]  //Added on request by DKMILLA
+    ["Land_Pier_F", 18 ],  //Added on request by DKMILLA
+    ["Land_Pod_Heli_Transport_04_ammo_F", 10000], //Cant seem fix it in otherways
+	["Land_Pod_Heli_Transport_04_box_F", 10000], //Cant seem fix it in otherways
+	["Land_Pod_Heli_Transport_04_repair_F", 10000], //Cant seem fix it in otherways
+	["Land_Pod_Heli_Transport_04_medevac_F", 10000], //Cant seem fix it in otherways
+	["Land_Pod_Heli_Transport_04_fuel_F", 10000], //Cant seem fix it in otherways
+	["Land_Pod_Heli_Transport_04_covered_F", 10000], //Cant seem fix it in otherways
+	["Land_Pod_Heli_Transport_04_bench_F", 10000] //Cant seem fix it in otherways
 ];
 
 /****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
