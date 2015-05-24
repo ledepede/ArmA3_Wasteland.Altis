@@ -327,7 +327,15 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"APC_Tracked_03_base_F",
 	"MBT_01_base_F",
 	"MBT_02_base_F",
-	"MBT_03_base_F"
+	"MBT_03_base_F",
+	"Land_Cargo40_military_green_F",  //Added on request by DKMILLA
+	"Land_Pod_Heli_Transport_04_ammo_F",
+	"Land_Pod_Heli_Transport_04_box_F",
+	"Land_Pod_Heli_Transport_04_repair_F",
+	"Land_Pod_Heli_Transport_04_medevac_F",
+	"Land_Pod_Heli_Transport_04_fuel_F",
+	"Land_Pod_Heli_Transport_04_covered_F",
+	"Land_Pod_Heli_Transport_04_bench_F"
 ];
 
 
@@ -379,7 +387,11 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Heli_Transport_03_base_F", 150],
 	["Heli_Transport_04_base_F", 30],
 	["Heli_Attack_01_base_F", 10],
-	["Heli_Attack_02_base_F", 20]
+	["Heli_Attack_02_base_F", 20],
+	["Land_Cargo40_military_green_F", 300],  //Added on request by DKMILLA
+	["Land_Pod_Heli_Transport_04_covered_F", 50],
+	["Land_Pod_Heli_Transport_04_box_F", 100],
+	["Land_Pod_Heli_Transport_04_medevac_F", 30]
 ];
 
 /**
@@ -449,7 +461,10 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_Shoot_House_Wall_F", 3],
 	["Land_Stone_8m_F", 5],
 	["Land_ToiletBox_F", 2],
-	["Land_BarrelWater_F", 2]
+	["Land_BarrelWater_F", 2],
+	["Land_Cargo_HQ_V1_F", 15],  //Added on request by DKMILLA
+    ["Land_LampHalogen_F", 3],  //Added on request by DKMILLA
+    ["Land_Pier_F", 18 ]  //Added on request by DKMILLA
 ];
 
 /****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
@@ -518,5 +533,16 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_ToiletBox_F",
 	"Land_BarrelWater_F",
 	"Land_HandyCam_F",
-	"Land_Laptop_F"
+	"Land_Laptop_F",
+	"Land_Cargo_HQ_V1_F",  //Added on request by DKMILLA
+    "Land_LampHalogen_F",  //Added on request by DKMILLA
+    "Land_Cargo40_military_green_F",  //Added on request by DKMILLA
+    "Land_Pier_F",  //Added on request by DKMILLA
+	"Land_Pod_Heli_Transport_04_ammo_F",
+	"Land_Pod_Heli_Transport_04_box_F",
+	"Land_Pod_Heli_Transport_04_repair_F",
+	"Land_Pod_Heli_Transport_04_medevac_F",
+	"Land_Pod_Heli_Transport_04_fuel_F",
+	"Land_Pod_Heli_Transport_04_covered_F",
+	"Land_Pod_Heli_Transport_04_bench_F"
 ];
