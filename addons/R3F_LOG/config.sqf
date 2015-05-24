@@ -406,7 +406,8 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	// e.g. : ["MyTransportableObjectClassName1", itsCost], ["MyTransportableObjectClassName2", itsCost]
 	["Static_Designator_01_base_F", 2],
 	["Static_Designator_02_base_F", 2],
-	["Land_Device_assembled_F", 10], //Re Locker
+	["Land_Device_assembled_F", 10], //Base Locker
+	["Land_Portable_generator_F", 5] //Base Re-locker
 	["StaticWeapon", 5],
 	["Box_NATO_AmmoVeh_F", 10],
 	["B_supplyCrate_F", 5],
@@ -485,7 +486,8 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	// e.g. : "MyMovableObjectClassName1", "MyMovableObjectClassName2"
 	"Static_Designator_01_base_F",
 	"Static_Designator_02_base_F",
-	"Land_Device_assembled_F", //relocker
+	"Land_Device_assembled_F", //Base locker
+	"Land_Portable_generator_F", //Base Relocker
 	"StaticWeapon",
 	"ReammoBox_F",
 	"Kart_01_Base_F",
