@@ -490,7 +490,7 @@ uniformArray = compileFinal str
 	["Full Ghillie (Lush) (AAF)", "U_I_FullGhillie_lsh", 2500, "uni"], //DLC Uniform
 	["Full Ghillie (Semi-Arid) (NATO)", "U_B_FullGhillie_sard", 2500, "uni"], //DLC Uniform
 	["Full Ghillie (Semi-Arid) (CSAT)", "U_O_FullGhillie_sard", 2500, "uni"], //DLC Uniform
-	["Full Ghillie (Semi-Arid) (AAF)", "U_I_FullGhillie_sard", 2500, "uni"], //DLC Uniform
+	["Full Ghillie (Semi-Arid) (AAF)", "U_I_FullGhillie_sard", 2500, "uni"] //DLC Uniform
 	//["Tron Light Suit (Blue)", "U_B_Protagonist_VR", 5000, "uni"],
 	//["Tron Light Suit (Red)", "U_O_Protagonist_VR", 5000, "uni"],
 	//["Tron Light Suit (Green)", "U_I_Protagonist_VR", 5000, "uni"]
@@ -692,7 +692,6 @@ genObjectsArray = compileFinal str
 	["Scaffolding", "Land_Scaffolding_F", 1000, "object"],
 	["Food sacks", "Land_Sacks_goods_F", 5000, "object"], // Added on player request
 	["Water Barrel", "Land_BarrelWater_F", 5000, "object"], // Added on player request
-
 	["Pier", "Land_Pier_F", 1000, "object"], 							//Added on request by DKMILLA
 	["Container", "Land_Cargo40_military_green_F", 10000, "object"], 	//Added on request by DKMILLA
 	["Lamp", "Land_LampHalogen_F", 1000, "object"]  					//Added on request by DKMILLA
@@ -825,7 +824,18 @@ helicoptersArray = compileFinal str
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"], // Armed AW159
 	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 800000, "vehicle"], // RAH-66 with gunner
 	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 1000000, "vehicle"], // Mi-28 with gunner
-	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 1000000, "vehicle"] // Mi-28 with gunner (black camo)
+	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 1000000, "vehicle"], // Mi-28 with gunner (black camo)
+	
+	//Added tarupods here
+
+	["Taru Fuel Pod", "Land_Pod_Heli_Transport_04_fuel_F", 10000, "vehicle"],
+	["Taru Covered Pod", "Land_Pod_Heli_Transport_04_covered_F", 10000, "vehicle"],
+	["Taru Bench Pod", "Land_Pod_Heli_Transport_04_bench_F", 10000, "vehicle"],
+	["Taru Medevac Pod", "Land_Pod_Heli_Transport_04_medevac_F", 10000, "vehicle"],
+	["Taru Repair Pod", "Land_Pod_Heli_Transport_04_repair_F", 10000, "vehicle"],
+	["Taru Box Pod", "Land_Pod_Heli_Transport_04_box_F", 10000, "vehicle"],
+	["Taru Ammo Pod", "Land_Pod_Heli_Transport_04_ammo_F", 10000, "vehicle"]
+	
 ];
 
 planesArray = compileFinal str
