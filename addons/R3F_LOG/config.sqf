@@ -407,7 +407,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Static_Designator_01_base_F", 2],
 	["Static_Designator_02_base_F", 2],
 	["Land_Device_assembled_F", 10], //Base Locker
-	["Land_Portable_generator_F", 5] //Base Re-locker
+	["Land_Portable_generator_F", 5], //Base Re-locker
 	["StaticWeapon", 5],
 	["Box_NATO_AmmoVeh_F", 10],
 	["B_supplyCrate_F", 5],
