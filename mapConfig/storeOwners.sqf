@@ -27,11 +27,11 @@ storeOwnerConfig = compileFinal str
 	["GunStore6", 1, 110, []],
 
 	// Buttons you can disable: "Land", "Armored", "Tanks", "Helicopters", "Boats", "Planes"
-	["VehStore1", 1, 75, ["Planes"]], // Planes removed
-	["VehStore2", 6, 45, ["Boats"]], // Planes removed
-	["VehStore3", 4, 250, ["Planes","Boats"]], // Planes removed
-	["VehStore4", 5, 155, ["Boats"]], // Planes removed
-	["VehStore5", 0, 190, ["Planes"]],
+	["VehStore1", 1, 75, []],
+	["VehStore2", 6, 45, ["Boats"]], //Almyra saltflats
+	["VehStore3", 4, 250, ["Boats"]], //Selakano airfield
+	["VehStore4", 5, 155, ["Boats"]], //Main Airfield
+	["VehStore5", 0, 190, ["Planes"]], //North of Kavala
 	["VehStore6", 5, -261, ["Planes"]],
 	["VehStore7", 1, 125, ["Planes","Boats"]]
 ];
