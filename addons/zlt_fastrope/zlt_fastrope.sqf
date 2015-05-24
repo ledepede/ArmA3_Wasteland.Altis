@@ -15,7 +15,7 @@ waituntil {player == player};
 zlt_rope_ropes = [];
 zlt_mutexAction = false;
 
-zlt_rope_helis = ["O_Heli_Light_02_unarmed_F","O_Heli_Light_02_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","I_Heli_Transport_02_F","B_Heli_Light_01_F"];
+zlt_rope_helis = ["O_Heli_Light_02_unarmed_F","O_Heli_Light_02_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","I_Heli_Transport_02_F","B_Heli_Light_01_F","B_Heli_Transport_03_F","B_Heli_Transport_03_unarmed_F","I_Heli_light_03_unarmed_F","O_Heli_Transport_04_covered_F"];
 zlt_rope_helidata = 
 [
 	[
@@ -42,6 +42,24 @@ zlt_rope_helidata =
 		["B_Heli_Light_01_F"],
 		[0.6,0.5,-25.9],
 		[-0.8,0.5,-25.9]
+	],
+	// chinook both versions
+	[
+		["B_Heli_Transport_03_F", "B_Heli_Transport_03_unarmed_F"],
+		[-1.11,-3.5,-24.9],
+		[1.08,-3.5,-24.9]
+	],
+	// hellcat green
+	[
+		["I_Heli_light_03_unarmed_F"],
+		[0.7,2.5,-24.9],
+		[-0.9,2.5,-24.9]
+	],
+	// taru transport (closed)
+	[
+		["O_Heli_Transport_04_covered_F"],
+		[-1.11,-3.5,-24.9],
+		[1.08,-3.5,-24.9]
 	]
 ];
 
