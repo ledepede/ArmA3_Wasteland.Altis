@@ -368,6 +368,7 @@ player createDiaryRecord ["credits",
 <br/>	* Micovery (A3W forums)
 <br/>	* BadVolt (A3W forums)
 <br/>	* LouD (NL United / A3W forums)
+<br/>	* Nakusuru for the oilrig (Steam Workshop)
 <br/>
 <br/><font size='16'>Thanks A LOT to everyone involved for the help and inspiration!</font>
 "
