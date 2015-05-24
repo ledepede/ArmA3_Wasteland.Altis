@@ -28598,7 +28598,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=282;
+		items=288;
 		class Item0
 		{
 			position[]={3612.1487,12.11851,13020.892};
@@ -30832,6 +30832,60 @@ class Mission
 			text="Oilrig";
 			type="o_naval";
 			colorName="ColorOrange";
+		};
+		class Item282
+		{
+			position[]={5857.4131,0.0031251232,7859.8647};
+			name="TERRITORY_OILRIG_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorYellow";
+			fillName="DiagGrid";
+			a=35;
+			b=46;
+		};
+		class Item283
+		{
+			position[]={13183.987,0.0065710382,11092.039};
+			name="TERRITORY_OILRIG_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorYellow";
+			fillName="DiagGrid";
+			a=35;
+			b=46;
+		};
+		class Item284
+		{
+			position[]={19388.5,-0.012451764,22426.559};
+			name="TERRITORY_OILRIG_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorYellow";
+			fillName="DiagGrid";
+			a=35;
+			b=46;
+		};
+		class Item285
+		{
+			position[]={5857.7109,-135.55348,7905.1279};
+			name="boatSpawn_23";
+			type="Empty";
+			colorName="ColorBlue";
+		};
+		class Item286
+		{
+			position[]={13185.727,-79.625938,11135.533};
+			name="boatSpawn_24";
+			type="Empty";
+			colorName="ColorBlue";
+		};
+		class Item287
+		{
+			position[]={19389.471,-176.04747,22471.49};
+			name="boatSpawn_25";
+			type="Empty";
+			colorName="ColorBlue";
 		};
 	};
 	class Sensors
