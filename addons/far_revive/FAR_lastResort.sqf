@@ -4,7 +4,7 @@
 //	@file Name: FAR_lastResort.sqf
 //	@file Author: AgentRev
 
-private ["_hasCharge", "_hasSatchel", "_hasCharge2", "_hasSatchel2", "_mineType", "_pos", "_mine"];
+private ["_hasCharge", "_hasSatchel", "_hasCharge2", "_hasSatchel2", "_mineType", "_pos", "_mine", "_shout"];
 
 _hasCharge = "IEDUrbanSmall_Remote_Mag" in magazines player;
 _hasSatchel = "IEDUrbanBig_Remote_Mag" in magazines player;
