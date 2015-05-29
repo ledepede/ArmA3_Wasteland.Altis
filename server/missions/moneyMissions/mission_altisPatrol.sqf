@@ -146,7 +146,7 @@ _successExec =
 		_cash setVariable["owner","world",true];
 	};
 	
-	_drugpilerandomizer = [8,12,16];
+	_drugpilerandomizer = [4,8,12];
 	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
 	
 	for "_i" from 1 to _drugpile do 
