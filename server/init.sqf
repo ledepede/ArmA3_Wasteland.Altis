@@ -21,7 +21,7 @@ addMissionEventHandler ["HandleDisconnect",
 	_id = _this select 1;
 	_uid = _this select 2;
 	_name = _this select 3;
-	
+
 	diag_log format ["HandleDisconnect - %1", [_name, _uid]];
 
 	if (alive _unit) then
@@ -114,9 +114,7 @@ forEach
 	"A3W_atmEditorPlacedOnly",
 	"A3W_atmMapIcons",
 	"A3W_atmRemoveIfDisabled",
-	"A3W_uavControl",
-	"A3W_townSpawnCooldown",
-	"A3W_maxSpawnBeacons"
+	"A3W_uavControl"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
@@ -150,21 +148,20 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn) then
 	// extDB
 	if (_savingMethod == "extDB") then
 	{
-		_version = "extDB2" callExtension "9:VERSION";
+		_version = "extDB" callExtension "9:VERSION";
 
-		if (parseNumber _version >= 49) then
+		if (parseNumber _version >= 20) then
 		{
 			A3W_savingMethodName = compileFinal "'extDB'";
 			A3W_savingMethodDir = compileFinal "'extDB'";
 			A3W_extDB_ConfigName = compileFinal str (["A3W_extDB_ConfigName", "A3W"] call getPublicVar);
 			A3W_extDB_IniName = compileFinal str (["A3W_extDB_IniName", "a3wasteland"] call getPublicVar);
-			A3W_extDB_RconName = compileFinal str (["A3W_extDB_RconName", "A3W"] call getPublicVar);
 		}
 		else
 		{
 			if (_version != "") then
 			{
-				diag_log format "[INFO] ### extDB2 startup cancelled!";
+				diag_log format "[INFO] ### extDB startup cancelled!";
 				diag_log format ["[INFO] ### A3W requires extDB v20 or later: v%1 detected", _result];
 			}
 			else
