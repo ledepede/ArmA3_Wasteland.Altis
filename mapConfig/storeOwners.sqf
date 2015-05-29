@@ -15,7 +15,6 @@ storeOwnerConfig = compileFinal str
 	["GenStore3", 6, 45, []],
 	["GenStore4", 0, 265, []],
 	["GenStore5", 5, 350, []],
-	["GenStore6", 5, -444, []],
 	["GenStore7", 1, 270, []],
 	["GenStore8", 3, 140, []],
 
@@ -23,7 +22,6 @@ storeOwnerConfig = compileFinal str
 	["GunStore2", 1, 75, []],
 	["GunStore3", 6, 135, []],
 	["GunStore4", 1, 65, []],
-	["GunStore5", 5, -488, []],
 	["GunStore6", 1, 110, []],
 
 	// Buttons you can disable: "Land", "Armored", "Tanks", "Helicopters", "Boats", "Planes"
@@ -32,8 +30,7 @@ storeOwnerConfig = compileFinal str
 	["VehStore3", 4, 250, ["Boats"]], //Selakano airfield
 	["VehStore4", 5, 155, ["Boats"]], //Main Airfield
 	["VehStore5", 0, 190, ["Planes"]], //North of Kavala
-	["VehStore6", 5, -261, ["Planes"]],
-	["VehStore7", 1, 125, ["Planes","Boats"]]
+	["VehStore7", 1, 125, ["Planes","Boats"]] //Blufor base
 ];
 
 // Outfits for store owners
@@ -44,14 +41,12 @@ storeOwnerConfigAppearance = compileFinal str
 	["GenStore3", [["weapon", ""], ["uniform", "U_I_Protagonist_VR"]]],
 	["GenStore4", [["weapon", ""], ["uniform", "U_O_Protagonist_VR"]]],
 	["GenStore5", [["weapon", ""], ["uniform", "U_I_Protagonist_VR"]]],
-	["GenStore6", [['weapon', ""], ["uniform", "U_I_Protagonist_VR"]]],
 	["GenStore7", [['weapon', ""], ["uniform", "U_B_Protagonist_VR"]]],
 
 	["GunStore1", [["weapon", "LMG_Zafir_F"], ["uniform", "U_B_SpecopsUniform_sgg"]]],
 	["GunStore2", [["weapon", "srifle_DMR_01_F"], ["uniform", "U_O_SpecopsUniform_blk"]]],
 	["GunStore3", [["weapon", "srifle_GM6_camo_SOS_F"], ["uniform", "U_I_CombatUniform_tshirt"]]],
 	["GunStore4", [["weapon", "arifle_Katiba_GL_F"], ["uniform", "U_IG_Guerilla1_1"]]],
-	["GunStore5", [["weapon", "srifle_GM6_camo_SOS_F"], ["uniform", "U_IG_Guerilla1_1"]]],
 
 	["VehStore1", [["weapon", ""], ["uniform", "U_IG_leader"]]],
 	["VehStore2", [["weapon", ""], ["uniform", "U_Rangemaster"]]],
