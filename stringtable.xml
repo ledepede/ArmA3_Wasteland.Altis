@@ -96,6 +96,18 @@
         <Key ID="STR_WL_ShopDescriptions_CCTV_Base">
             <English>This is the base station for a television system in which the video signals are transmitted from one or more cameras via Wifi.</English>
         </Key>
+        <Key ID="STR_WL_ShopDescriptions_Marijuana">
+			<English>Get Relaxed!</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_LSD">
+			<English>WOAH! WHAT WAS THAT!</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_Cocaine">
+			<English>Get your twitch on!</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_Heroin">
+			<English>At this Stage, you may want to go to rehab.</English>
+		</Key>
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">
